@@ -1,0 +1,38 @@
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    static-path-pattern: /**
+#  thymeleaf:
+#    #      #缓冲的配置
+#    cache: false
+#    check-template: true
+#    check-template-location: true
+#    #开启MVC thymeleaf 视图解析
+#    enabled: true
+#    encoding: utf-8
+#    mode: HTML
+#    suffix: .html
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    #      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        dialect: com.example.config.MySQLConfig
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://cdb-0trgaicq.bj.tencentcdb.com:10038/cardemo?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: 323900llmT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#          driver-class-name: com.mysql.jdbc.Driver
+#fdfs:
+#  so-timeout: 1500
+#  connect-timeout: 600
+#  trackerList: file.lingmin.com:22122
+#debug: true
+server:
+  port: 8080
